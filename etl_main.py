@@ -38,7 +38,7 @@ def func(rdd):
         db['clickbaits'].insert_one(y)
         print("inserted")
         
-# Start the Spark Streaming application
+# Starting the Spark Streaming application
 kafka_stream.foreachRDD(func)
 ssc.start()
 ssc.awaitTermination()
